@@ -1,0 +1,12 @@
+
+DMSService/.vs/
+
+DMSService/DMSService/bin/
+
+DMSService/DMSService/obj/
+
+GRPCClient/.vs/
+
+GRPCClient/GRPCClient/bin/
+
+GRPCClient/GRPCClient/obj/
