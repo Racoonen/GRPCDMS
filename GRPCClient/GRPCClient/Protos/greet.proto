@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "DMSService";
+
+package dms;
+
+enum UploadStatusCode {
+        Unknown = 0;
+        Ok = 1;
+        Failed = 2;
+}
+
+message Chunk {
+        bytes Content = 1;
+}
+
+message UploadStatus {
+        string Message = 1;
+        UploadStatusCode Code = 2;
+}
+
+// the DocumentService definition
+service DocumentService {
+    rpc UploadDoc(stream Chunk) returns (UploadStatus);
+}
